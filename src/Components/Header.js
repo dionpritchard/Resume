@@ -105,7 +105,7 @@ function Header (props) {
           {(usingPhone != true) ? (
             <div className={classes.verticalAlign}>
               <Button className={classes.link} component={Link} to="/work" variant="outline" color="primary">Work</Button>
-              <Button className={classes.link} component={Link} to="/education" variant="outline" color="primary">Education</Button>
+              <Button className={classes.link} component={Link} to="/demo" variant="outline" color="primary">Demos</Button>
               <Button className={classes.link} component={Link} to="/testimonials" variant="outline" color="primary">Testimonials</Button>
               <Button className={classes.link} component={Link} to="/contact" variant="outline" color="primary">Contact</Button>
             </div>
@@ -126,8 +126,8 @@ function Header (props) {
           <MenuItem component={Link} to="/work" className={classes.menuItem} onClick={handleClose}>
             Work
           </MenuItem>
-          <MenuItem component={Link} to="/education" className={classes.menuItem} onClick={handleClose}>
-            Education
+          <MenuItem component={Link} to="/demo" className={classes.menuItem} onClick={handleClose}>
+            Demos
           </MenuItem>
           <MenuItem component={Link} to="/testimonials" className={classes.menuItem} onClick={handleClose}>
             Testimonials

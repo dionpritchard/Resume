@@ -11,6 +11,7 @@ import history from './util/history.js';
 import Home from './views/Home';
 import Work from './views/Work';
 import Contact from './views/Contact';
+import Demo from './views/Demo';
 
 //============[ Components ]============
 import Header from './Components/Header';
@@ -74,6 +75,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route path="/work" component={Work} />
               <Route path="/contact" component={Contact} />
+              <Route path="/demo" component={Demo} />
               <Route component={Construction} />
             </Switch>
           </div>

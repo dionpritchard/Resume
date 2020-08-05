@@ -37,7 +37,7 @@ function Construction(props) {
       <Grid item xs={12} sm={8} md={8} className={classes.gridItem} >
         <Typography variant='h4'>Under Development</Typography>
         <Typography variant='body1'>
-          Please bear with, this webpage was created <Moment fromNow>{'2020-07-23T12:00'}</Moment>. More content is coming soon.<br/>
+          Please bear with, this web app was created <Moment fromNow>{'2020-07-23T12:00'}</Moment>. More content is coming soon.<br/>
           Feel free to check out the <Link to='/work' className={classes.link}>Work page to see my work history.</Link> Thanks!</Typography>
       </Grid>
     </Grid>
