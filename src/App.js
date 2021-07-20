@@ -12,6 +12,7 @@ import Home from './views/Home';
 import Work from './views/Work';
 import Contact from './views/Contact';
 import Demo from './views/Demo';
+import Products from './views/Products';
 
 //============[ Components ]============
 import Header from './Components/Header';
@@ -25,18 +26,17 @@ import './Fonts/bauhaus-93.ttf';
 import './App.css';
 
 
-const appStyling = makeStyles((theme) => ({
-  root: {
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    [theme.breakpoints.up('md')]: {
-      maxWidth: '1080px',
-      margin: '0px auto',
+
+const custom_theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#2C5E55'
+
+    },
+    secondary: {
+      main: '#000000',
     },
   },
-}))
-const custom_theme = createMuiTheme({
   typography: {
     fontFamily: [
       'Roboto Condensed',
@@ -60,28 +60,90 @@ const custom_theme = createMuiTheme({
   },
 });
 
+const appStyling = makeStyles((theme) => ({
+
+  root: {
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    [theme.breakpoints.up('md')]: {
+      //maxWidth: '1080px',
+      margin: '0px auto',
+    },
+  },
+  newRoot: {
+    boxSizing: 'border-box',
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: '64px 1fr 64px',
+    minHeight: '100vh',
+
+  },
+  headerBar: {
+    boxShadow: '0px 0px 7px #888',
+    color: 'white',
+    backgroundColor: '#4B5195',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  footerBar: {
+    boxShadow: '0px 0px 7px #888',
+    color: 'white',
+    backgroundColor: '#4B5195',
+    justifyContent: 'center',
+  },
+}))
 
 function App() {
   const classes = appStyling()
   return (
     <ThemeProvider theme={custom_theme}>
-      <div className="App" className={classes.root}>
+      <div className="App" className={classes.newRoot}>
 
         <Router history={ history }>
+
+          <div className={classes.headerBar}>
+            <Header />
+          </div>
+
+          <div style={{display:'flex',justifyContent:'center',backgroundColor: '#f7f3f3',justifyContent:'center'}}>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/work" component={Work} />
+              <Route path="/products" component={Products} />
+              <Route component={Construction} />
+            </Switch>
+          </div>
+
+          <div className={classes.footerBar}>
+            Footer
+          </div>
+        </Router>
+
+
+
+
+
+
+
+      </div>
+        {/*<Router history={ history }>
           <Header />
 
           <div style={{flexGrow:1}}>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/work" component={Work} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/demo" component={Demo} />
+              <Route path="/products" component={Products} />
+              {//<Route path="/contact" component={Contact} />}
+              {//<Route path="/demo" component={Demo} />}
               <Route component={Construction} />
             </Switch>
           </div>
           <Footer />
-        </Router>
-      </div>
+        </Router>*/}
+
     </ThemeProvider>
   );
 }

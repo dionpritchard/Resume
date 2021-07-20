@@ -53,6 +53,7 @@ const courseStyling = makeStyles((theme) => ({
   },
   courseContainer: {
      margin:'0px 0px 48px 0px',
+     flexGrow: 1,
   },
   courseContainerHeader: {
     display:'flex',
@@ -66,6 +67,7 @@ const courseStyling = makeStyles((theme) => ({
     justifyContent:'flex-start',
     flexWrap:'wrap',
     textAlign: 'center',
+    flexBasis: '100%',
   },
   courseDescription: {
     fontFamily:'Roboto Condensed',
@@ -155,8 +157,11 @@ const workStyling = makeStyles((theme) => ({
 }))
 const phoneStyling = makeStyles({
   root: {
-    marginTop: 8,
+    maxWidth: '1080px',
+    minHeight: '100%',
     color: 'black',
+    backgroundColor: 'white',
+    boxShadow: '0px 0px 20px #aaa'
   },
 
   card: {

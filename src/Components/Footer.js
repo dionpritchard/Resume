@@ -37,8 +37,8 @@ function Footer (props) {
     <div className={classes.footer}>
       <Typography variant='body1' className={classes.footerText}>
         More content coming soon!<br/>
-        Website created <Moment fromNow>{'2020-07-23T12:00'}</Moment> |
-        Last updated <Moment fromNow>{'2020-07-30T14:02'}</Moment>
+        {/*Website created <Moment fromNow>{'2020-07-23T12:00'}</Moment> |*/}
+        Last updated <Moment fromNow>{'2020-09-02T15:56'}</Moment>
       </Typography>
     </div>
   )

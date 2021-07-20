@@ -32,7 +32,7 @@ function Contact () {
       <TextField id='name' label='Name' aria-label='Your Name' className={classes.textfield} />
       <TextField id='message' label='Message' aria-label='Your Message' className={classes.textfield} />
 		</form>
-    
+
 	);
 }
 

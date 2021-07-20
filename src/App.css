@@ -13,3 +13,39 @@
   font-family: 'Bauhaus';
   src: local('Bauhaus'), url(./Fonts/bauhaus-93.ttf) format('truetype');
 }
+
+
+@keyframes spread {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%; 
+  }
+}
+
+.MyAnimation-enter {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+
+.MyAnimation-enter.MyAnimation-enter-active {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  transition: left 2s, top 2s;
+}
+
+.MyAnimation-exit {
+  position: absolute;
+  left: 80%;
+  top: 20%;
+}
+
+.MyAnimation-exit.MyAnimation-exit-active {
+  position: absolute;
+  left: 80%;
+  top: 20%;
+  transition: left 2s, top 2s;
+}
